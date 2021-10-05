@@ -1,0 +1,74 @@
+/*queries to be run one at a time*/
+
+/* College insertions */
+
+
+INSERT INTO Colleges (College_ID, Address, Location, Contact, Name)
+VALUES ('engi_sch', '123 Something’, '8th St Newark NJ', '1234567890','Johnson Engineering');
+
+INSERT INTO Colleges (College_ID, Address, Location, Contact, Name)
+VALUES ('math_sch', '101 Main St', '9th St Newark NJ', '1114567890', 'School of Mathematics');
+
+INSERT INTO Colleges (College_ID, Address, Location, Contact, Name)
+VALUES ('design_sch', '2nd Broad St', '10th St Newark NJ', '2224567890','School of Design');
+
+INSERT INTO Colleges (College_ID, Address, Location, Contact, Name)
+VALUES ('bus_sch', '1st St', '11th St Newark NJ', '3334567890','School of Business');
+
+INSERT INTO Colleges (College_ID, Address, Location, Contact, Name)
+VALUES ('lit_sch', 'Ross Ave', '12th St Newark NJ', '4444567890','School of Literature');
+
+/* Student insertions */
+
+INSERT INTO Student(Email, ID, Phone_Num, Address, First_Name, Middle_Int, Last_Name, Gender,Age, SSN,Student_Program)
+VALUES ('ste111@njit.edu', '000111', '2012223333', '1 Main St. Newark', 'John','' , 'Smith', 'Male', '20','8882223333','001')
+
+INSERT INTO Student(Email, ID, Phone_Num, Address, First_Name, Middle_Int, Last_Name, Gender,Age, SSN,Student_Program)
+VALUES ('ste222@njit.edu', '000222', '2022223333', '2 Main St. Newark', 'William','A' , 'Johnson', 'Male', '21','8881113333','002')
+
+INSERT INTO Student(Email, ID, Phone_Num, Address, First_Name, Middle_Int, Last_Name, Gender,Age, SSN,Student_Program)
+VALUES ('ste333@njit.edu', '000333', '2032223333', '3 Main St. Newark', 'Katie','' ,'Miller', 'Female', '20','8885553333','003')
+
+INSERT INTO Student(Email, ID, Phone_Num, Address, First_Name, Middle_Int, Last_Name, Gender,Age, SSN,Student_Program)
+VALUES ('ste444@njit.edu', '000444', '2042223333', '500 Broad Ave. Newark',  'Brad','' , 'Lee', 'Male', '19','8887773333','004')
+
+INSERT INTO Student(Email, ID, Phone_Num, Address, First_Name, Middle_Int, Last_Name, Gender,Age, SSN,Student_Program)
+VALUES ('ste555@njit.edu', '000555', '2052223333', '200 Broad Ave. Newark',  'Jamie','' , 'Morgan', 'Female', '22','8880003333','005')
+
+
+/* Program insertions */
+
+INSERT INTO Program(College, Eligibility, Prog_ID, Prog_Name, Student_ID)
+VALUES ('engi_sch', 'B', '001','Electrical Engineering', '000111')
+
+INSERT INTO Program(College, Eligibility, Prog_ID, Prog_Name, Student_ID)
+VALUES ('math_sch', 'B', '002','Applied Mathematics', '000222')
+
+INSERT INTO Program(College, Eligibility, Prog_ID, Prog_Name, Student_ID)
+VALUES ('design_sch', 'B', '003','Graphic Design', '000333')
+
+INSERT INTO Program(College, Eligibility, Prog_ID, Prog_Name, Student_ID)
+VALUES ('lit_sch', 'B', '004','American Literature', '000444')
+
+INSERT INTO Program(College, Eligibility, Prog_ID, Prog_Name, Student_ID)
+VALUES ('bus_sch', 'B', '005', 'Accounting', '000555')
+
+/* Admin insertions */
+
+
+INSERT INTO Admin(Admin_Name, Admin_ID, Password, College, Prog_Name,Student_ID)
+VALUES ('Adam Smith','01','1','engi_sch','001','000111')
+
+INSERT INTO Admin(Admin_Name, Admin_ID, Password, College, Prog_Name,Student_ID)
+VALUES ('Bob Brown','02','2','math_sch','002','000222')
+
+INSERT INTO Admin(Admin_Name, Admin_ID, Password, College, Prog_Name,Student_ID)
+VALUES ('Chris Davies','03','3','design_sch','003','000333')
+
+INSERT INTO Admin(Admin_Name, Admin_ID, Password, College, Prog_Name,Student_ID)
+VALUES ('Damian Lee','04','4','lit_sch','004','000444')
+
+INSERT INTO Admin(Admin_Name, Admin_ID, Password, College, Prog_Name,Student_ID)
+VALUES ('Ethan King','05','5','bus_sch','005','000555')
+
+
