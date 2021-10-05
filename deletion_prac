@@ -1,0 +1,37 @@
+/* COLLEGE */
+
+UPDATE Colleges
+SET contact = '2011235555'
+WHERE College_ID = 'engi_sch';
+
+DELETE FROM Admin WHERE College = 'bus_sch';
+DELETE FROM Program WHERE College = 'bus_sch';
+DELETE FROM Colleges WHERE College_ID = 'bus_sch';
+
+/* STUDENT */
+
+UPDATE Student
+SET Student_Program = '001'
+WHERE First_Name = 'William';
+
+
+DELETE FROM Admin WHERE Student_ID = '111';
+DELETE FROM Program WHERE Student_ID = '111';
+DELETE FROM Student WHERE ID = '111';
+
+/* PROGRAM */
+
+UPDATE Program
+SET Eligibility = 'A'
+WHERE College = 'engi_sch';
+
+DELETE FROM Admin WHERE Student_ID = '333';
+DELETE FROM Program WHERE Student_ID = '333';
+
+/* ADMIN */
+
+UPDATE Admin
+SET Admin_Name = 'James'
+WHERE Admin_ID = '1';
+
+DELETE FROM Admin WHERE Admin_ID = '2';
