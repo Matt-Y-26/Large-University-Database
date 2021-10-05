@@ -1,0 +1,45 @@
+CREATE TABLE Colleges (
+    College_ID varchar(30) NOT NULL PRIMARY KEY,
+    Address varchar(20) NOT NULL,
+    Location varchar(30) NOT NULL,
+    Contact int,
+    Name varchar(30) NOT NULL
+);
+
+CREATE TABLE Student (
+    Email varchar(35) NOT NULL,
+    ID int NOT NULL PRIMARY KEY,
+    Phone_Num int,
+    Address varchar(25),
+    First_Name varchar(15) NOT NULL,
+    Middle_Int char(1),
+    Last_Name varchar(20) NOT NULL,
+    Gender varchar(10),
+    Age int NOT NULL,
+    SSN int NOT NULL,
+    Student_Program int NOT NULL
+    
+);
+
+CREATE TABLE Program (
+    College varchar(30) NOT NULL,
+    Eligibility char(1) NOT NULL,
+    Prog_ID varchar(30) NOT NULL PRIMARY KEY,
+    Prog_Name varchar(30) NOT NULL,
+    Student_ID int NOT NULL,
+    FOREIGN KEY (College) REFERENCES Colleges(College_ID),
+    FOREIGN KEY (Student_ID) REFERENCES Student(ID)
+);
+
+
+CREATE TABLE Admin(
+    Admin_Name varchar(30) NOT NULL,
+    Admin_ID int NOT NULL PRIMARY KEY,
+    Password varchar(25) NOT NULL,
+    College varchar(30) NOT NULL,
+    Prog_Name varchar(30) NOT NULL,
+    Student_ID int NOT NULL,
+    FOREIGN KEY (College) REFERENCES Colleges(College_ID),
+    FOREIGN KEY (Prog_Name) REFERENCES Program(Prog_ID),
+    FOREIGN KEY (Student_ID) REFERENCES Student(ID)
+);
